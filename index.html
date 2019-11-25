@@ -1,81 +1,55 @@
-<!doctype html>
-<html lang="en">
-    <head>
-        <!-- Required meta tags -->
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <link rel="icon" href="img/favicon.png" type="image/png">
-        <title>Builder Construction Multi</title>
-        <!-- Bootstrap CSS -->
-        <<!-- link rel="stylesheet" href="css/bootstrap.css">
-        <link rel="stylesheet" href="css/font-awesome.min.css"> -->
-       <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<!DOCTYPE html>
 
-        <!-- main css -->
-        <link rel="stylesheet" href="card.css">
-        <!-- <link rel="stylesheet" href="css/responsive.css"> -->
-    </head>
-    <body>
-        
-        <!--================Header Menu Area =================-->
-        
-        
-        <!--================Services Area =================-->
-        <section class="services_area p_120">
-        	<div class="container">
-        		<div class="main_title">
-        			<h2>Our Offered Services</h2>
-        			<p>Lorem ipsum dolor sit amet, consecteturadipis icing elit,</p>
-        		</div>
-        		<div class="row services_inner">
-        			<div class="col-lg-4 col-md-6">
-        				<div class="services_item">
-        					<img src="service-icon-1.png" alt="">
-        					<a href="#"><h4>Building Drawings</h4></a>
-        					<p>Lorem ipsum dolor sit amet, consecteturadipis icing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-        				</div>
-        			</div>
-        			<div class="col-lg-4 col-md-6">
-        				<div class="services_item">
-        					<img src="service-icon-2.png" alt="">
-        					<a href="#"><h4>Painting Constructions</h4></a>
-        					<p>Lorem ipsum dolor sit amet, consecteturadipis icing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-        				</div>
-        			</div>
-        			<div class="col-lg-4 col-md-6">
-        				<div class="services_item">
-        					<img src="service-icon-3.png" alt="">
-        					<a href="#"><h4>Repairing Constructions</h4></a>
-        					<p>Lorem ipsum dolor sit amet, consecteturadipis icing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-        				</div>
-        			</div>
-        			<div class="col-lg-4 col-md-6">
-        				<div class="services_item">
-        					<img src="service-icon-1.png" alt="">
-        					<a href="#"><h4>Building Drawings</h4></a>
-        					<p>Lorem ipsum dolor sit amet, consecteturadipis icing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-        				</div>
-        			</div>
-        			<div class="col-lg-4 col-md-6">
-        				<div class="services_item">
-        					<img src="service-icon-2.png" alt="">
-        					<a href="#"><h4>Painting Constructions</h4></a>
-        					<p>Lorem ipsum dolor sit amet, consecteturadipis icing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-        				</div>
-        			</div>
-        			<div class="col-lg-4 col-md-6">
-        				<div class="services_item">
-        					<img src="service-icon-3.png" alt="">
-        					<a href="#"><h4>Repairing Constructions</h4></a>
-        					<p>Lorem ipsum dolor sit amet, consecteturadipis icing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-        				</div>
-        			</div>
-        		</div>
-        	</div>
-        </section>
-        <!--================End Services Area =================-->
-        
-        <!--================Counter Area =================-->
-       
-    </body>
-</html>
+ 
+<html><head>
+  <meta charset="utf-8">
+ 
+<link rel="stylesheet" type="text/css" href="card.css">
+</head><body style="direction: rtl!important">
+  <div class="con">
+    <form action='searchphp.php' method="POST">
+        <div class="in">
+      <input type="text" name="carType" placeholder="نوع السيارة"  ></div>
+       <div class="in">
+            <input type="text" name="carModel" placeholder="موديل السيارة "></div>
+             <div class="in">
+                                            <select name="fuel">
+                                            	<option value="1" >نوع الوقود</option>
+                                            	<option value="1" >الكل </option>
+                                                <option value="نزين">بنزين</option>
+                                                <option value="ديزل">ديزل</option>
+                                                <option value="هايبرد" >هايبرد  </option>
+                                            </select></div>
+                                             <div class="in">
+                                            <select  name="gear">
+                                            	<option value="1"> نوع الجير</option>
+                                            	<option value="1" >الكل</option>
+                                                <option value="عادي">عادي</option>
+                                                <option value="أتوماتيك">أتوماتيك</option>
+                                                <option value="نصف أتوماتيك">نصف اتوماتيك   </option>
+                                            </select> </div> <div class="in">
+                                            <select  name="licenseType">
+                                            	<option value="1">رخصة السيارة</option>
+                                            	<option value="1">الكل</option>
+                                                <option value="فلسطينية ">فلسطينية    </option>
+                                                <option value="نمرة صفراء ">نمرة صفراء  </option>
+                                                <option value="دولية">دولية </option>
+                                            </select></div> <div class="in">
+                                             <select  name="price">
+                                            	<option value="1">السعر</option>
+                                            	<option value="1">الكل</option>
+                                                <option value="1">0-10 الاف </option>
+                                                <option value="2">10_30 ألف</option>
+                                                <option value="3">30_50 الف</option>
+                                                <option value="4">50_70 الف</option>
+                                                <option value="5">70_90 الف</option>
+                                                <option value="6">90_100 الف</option>
+                                                <option value="7">100_150 الف</option>
+                                                <option value="8">  أكثر من 150 ألأف</option>
+                                            </select>
+                                        </div>
+
+                          <button type="submit" name="submit">bbb </button>
+    </form>
+  </div>
+</body></html>
