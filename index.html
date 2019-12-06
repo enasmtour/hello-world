@@ -1,103 +1,593 @@
 
 
+<?php 
+  session_start();
+ 
+   
+   ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
- <title>Login V18</title>
- <meta charset="UTF-8">
- <meta name="viewport" content="width=device-width, initial-scale=1">
- <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
-<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
-<link rel="stylesheet" type="text/css" href="card.css">
-</head>
-<body>
-<div class="container">
-	<div class="row">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Sign Up Form by Colorlib</title>
+<!-- Font Icon -->
+<link rel="stylesheet" href="fonts/material-icon/css/material-design-iconic-font.min.css">
+<link rel="stylesheet" href="vendor/nouislider/nouislider.min.css">
+    <!-- Main css -->
+    <link rel="stylesheet" href="card.css">
+   
+    </head>
+    <body>
+        <section>
+   <?php  require'nav.php';
+     ?>
+        </section>
 
-		<section class="content">
-			<h1>السيارات المباعة</h1>
-			<div class="col-md-8 col-md-offset-2">
-				<div class="panel panel-default">
-					<div class="panel-body">
-					
-						<div class="table-container">
-							<table class="table table-filter">
-								<tbody>
-									<?php 
-									
-               
-                                  for ($i=1;$i>=5;$i++)
+       <div class="form-style-5">
+        <h2>أترك لنا معلوماتك و  مواصفات السيارة التي تريدها وسوف نتواصل معك قريبا.</h2>
+        <h3>أو تواصل  معنا على الرقم : <a  href="tel:0599559885"> 0599559885
+ </a> </h3>
+<form action="requstCarphp.php" method="POST">
+<fieldset>
+<legend><span class="number">1</span> معلومات التواصل</legend>
+<input type="text" name="userName" placeholder="الأسم  *">
+<input type="text" name="userAddress" placeholder="العنوان *">
+<input type="text" name="userPhone" placeholder="رقم الهاتف *">
+</fieldset>
 
-               { 
-      
-									?>
-									<tr>
-									   <td>
-											
-												
-												
-													
-											<h5 class="title">
-														ممممممم
-											</h5>
-												
-										
+<fieldset>
+    <legend><span class="number">2</span> مواصفات السيارة</legend>
+<!-- <textarea name="field3" placeholder="About yourself"></textarea>
+ -->
 
-											
-										</td>
-										
-										<td>
-											<h5 class="title">
-									ىلبءييقس 
+           <select  class="select-css"searchable="أبحث هنا"  name="cartype" id="mySelect"​ onchange="myFunction1()">
+<option value='0' >نوع</option>
+<option  value="27">Dodge</option>
+<option    value="26">أفيكو</option>
+<option   value="42">الفا روميو</option>
+<option   value="10">اوبل</option>
+<option   value="11">اودي</option>
+<option   value="22">ايسوزو</option>
+<option   value="38">باص</option>
+<option   value="15">بي ام دبليو BMW</option>
+<option   value="3">بيجو</option>
+<option  value="4">تويوتا</option>
+<option  value="41">جاجوار</option>
+<option  value="2">جي ام سي </option>
+<option  value="24">جيب Jeep</option>
+<option  value="40">داتشيا</option>
+<option value="30">داف</option>
+<option value="14">دايو</option>
+<option value="33">دراجة نارية</option>
+<option value="28">ديهاتسو</option>
+<option value="25">روفر</option>
+<option value="13">رينو</option>
+<option value="23">سانغ يونغ</option>
+<option value="36">ستروين</option>
+<option value="9">سكودا</option>
+<option value="18">سوبارو</option>
+<option value="35">سوزوكي</option>
+<option value="29">سيت</option>
+<option value="37">شاحنة</option>
+<option value="32">شفرليت</option>
+<option value="21">فورد</option>
+<option value="19">فولفو</option>
+<option value="7">فولكسفاجن</option>
+<option value="5">فيات</option>
+<option value="34">كاديلاك</option>
+<option value="39">كرايسلر</option>
+<option value="20">كيا Kia</option>
+<option value="8">لاندروفر</option>
+<option value="16">مازدا</option>
+<option value="6">مرسيدس</option>
+<option value="17">ميتسوبيشي</option>
+<option value="12">نيسان</option>
+<option value="31">هوندا</option>
+<option value="1">هونداي</option></select>
+<select class="select-css sele" id="comboBox"  name="carmodel" >
+<option value='0' id="1" class="00">موديل</option>
+<option value='أوميغا' class='10 0'>أوميغا  </option>
+<option value='إنسيجنيا' class='10 0'>إنسيجنيا</option>
+<option value='استرا' class='10 0 '>استرا</option>
+
+
+<option value='اسكونا' class='10 0'>اسكونا</option>
+<option value='ريكورد' class='10 0'>ريكورد</option>
+<option value='زافيرا' class='10 0'>زافيرا</option>
+<option value='فيكترا' class='10 0'>فيكترا</option>
+<option value='كاديت' class='10 0'>كاديت</option>
+<option value='كورسا' class='10 0'>كورسا</option>
+<option value='SLine' class='11 0'> SLine</option>
+<option value='80' class='11 0'>80</option>
+<option value='A3' class='11 0'>A3</option>
+<option value='A4' class='11 0'>A4</option>
+<option value='A6' class='11 0'>A6</option>
+<option value='A80' class='11 0'>A80</option>
+<option value='Q3' class='11 0'>Q3</option>
+<option value='Q5' class='11 0'>Q5</option>
+<option value='Q7' class='11 0'>Q7</option>
+<option value='TT كوبيه  ' class='11 0'>TT كوبيه  </option>
+<option value='3900' class='22 0'>3900</option>
+<option value='تروبر' class='22 0'>تروبر</option>
+<option value='ديماكس' class='22 0'>ديماكس</option>
 
 
 
-											</h5>	
-										</td>
-											<td>
-											<h5 class="title">
-									4567554
+<option value='316' class='15 0'>316</option>
+<option value='318' class='15 0'>318</option>
+<option value='320' class='15 0'>320</option>
+<option value='325' class='15 0'>325</option>
+<option value='435' class='15 0'>435</option>
 
 
 
-											</h5>	
-										</td>
+<option value='520' class='15 0'>520</option>
+<option value='523' class='15 0'>523</option>
+<option value='525' class='15 0'>525</option>
+<option value='528' class='15 0'>528</option>
+<option value='530' class='15 0'>530</option>
+<option value='535' class='15 0'>535</option>
+<option value='730' class='15 0'>730</option>
+<option value='740' class='15 0'>740</option>
+<option value='E60' class='15 0'>E60</option>
+<option value='i 116' class='15 0'>i 116</option>
+<option value='i120' class='15 0'>i120</option>
+<option value='M3' class='15 0'>M3</option>
+<option value='M4' class='15 0'>M4</option>
+<option value='X5' class='15 0'>X5</option>
+<option value='X6' class='15 0'>X6</option>
+<option value='X7' class='15 0'>X7</option>
 
-										<td>
-											<h5 class="title">
-									543356
+
+
+<option value='ميني كوبر  ' class='15 0'>ميني كوبر   </option>
+<option value='104' class='3 0'>104</option>
+<option value='106' class='3 0'>106</option>
+<option value='107' class='3 0'>107</option>
+<option value='2008' class='3 0'>2008</option>
+<option value='204' class='3 0'>204</option>
+<option value='205' class='3 0'>205</option>
+<option value='206' class='3 0'>206</option>
+<option value='206+' class='3 0'>206+</option>
+<option value='207' class='3 0'>207</option>
+<option value='208' class='3 0'>208</option>
+
+<option value='3008' class='3 0' >3008</option>
+<option value='301' class='3 0'>301</option>
+<option value='305' class='3 0'>305</option>
+<option value='306' class='3 0'>306</option>
+<option value='307' class='3 0'>307</option>
+<option value='308' class='3 0'>308</option>
+<option value='308 GT' class='3 0'>308 GT</option>
+<option value='308 GT i' class='3 0'>308 GTi</option>
+
+<option value='309' class='3 0'>309</option>
+<option value='405' class='3 0'>405</option>
+<option value='406' class='3 0'>406</option>
+<option value='407' class='3 0'>407</option>
+<option value='5008' class='3 0'>5008</option>
+<option value='504' class='3 0'>504</option>
+<option value='505' class='3 0'>505</option>
+<option value='508' class='3 0'>508</option>
+<option value='605' class='3 0'>605</option>
+<option value='607' class='3 0'>607</option>
+
+
+<option value='اكسبرت' class='3 0'>اكسبرت</option>
+<option value='بارتنر' class='3 0'>بارتنر</option>
+<option value='بوكسر' class='3 0'>بوكسر</option>
+<option value='FT-86' class='4 0'>FT-86</option>
+<option value='أفالون' class='4 0'>أفالون</option>
+<option value='افانزا' class='4 0'>افانزا</option>
+
+<option value='افينسيس' class='4 0'>افينسيس</option>
+<option value='اورايون' class='4 0'>اورايون</option>
+<option value='باريس' class='4 0'>باريس</option>
+<option value='برادو' class='4 0'>برادو</option>
+<option value='برافيا' class='4 0'>برافيا</option>
+<option value='بريوس' class='4 0'>بريوس</option>
+<option value='تيندرا' class='4 0'>تيندرا</option>
+<option value='راف' class='4 0'>راف</option>
+<option value='زيلاس' class='4 0'>زيلاس</option>
+<option value='سيكويا' class='4 0'>سيكويا</option>
+<option value='فورتشينر' class='4 0'>فورتشينر</option>
+<option value='كامري' class='4 0'>كامري</option>
+<option value='كورولا ' class='4 0'>كورولا</option>
+<option value='لاند كروزر  ' class='4 0'>لاند كروزر  </option>
+<option value='هيلاكس' class='4 0'>هيلاكس</option>
+<option value='XE' class='41 0'>XE</option>
+
+
+<option value='سفانا' class='2 0'>سفانا</option>
+<option value='sofa' class='24 0'>sofa</option>
+
+<option value='Wrangler' class='24 0'>Wrangler</option>
+<option value='شيروكي' class='24 0'>شيروكي</option>
+<option value='كومباس' class='24 0'>كومباس</option>
+<option value='داستر' class='40 0'>داستر</option>
+<option value='دوكر' class='40 0'>دوكر</option>
+<option value='سانديرو' class='40 0'>سانديرو</option>
+<option value='ستيب واي  ' class='40 0'>ستيب واي   </option>
+<option value='لوجان' class='40 0'>لوجان</option>
+<option value='لوجان MCV ' class='40 0'>لوجان MCV </option>
+<option value='لودجي' class='40 0'>لودجي</option>
+<option value='45' class='30 0'>45</option>
+<option value='55' class='30 0'>55</option>
+<option value='CF75' class='30 0'>CF75</option>
+<option value='CF85' class='30 0'>CF85</option>
+<option value='رايسر' class='14 0'>رايسر</option>
+<option value='سبيرو' class='14 0'>سبيرو</option>
+<option value='سوبر رايسر  ' class='14 0'>سوبر رايسر  </option>
+<option value='كوراندو' class='14 0'>كوراندو</option>
+<option value='لانوس' class='14 0'>لانوس</option>
+<option value='ليجانزا' class='14 0'>ليجانزا</option>
+<option value='ماتيز' class='14 0'>ماتيز</option>
+<option value='نوبيرا' class='14 0'>نوبيرا</option>
+<option value='تريوس' class='28 0'>تريوس</option>
+<option value='سيريون' class='28 0'>سيريون</option>
+<option value='ماتيريا' class='28 0'>ماتيريا</option>
+<option value='200' class='25 0'>200</option>
+<option value='s400' class='25 0'>s400</option>
+
+
+<option value='R5' class='13 0'>R5</option>
+<option value='R9' class='13 0'>R9</option>
+<option value='اكسبرس' class='13 0'>اكسبرس</option>
+<option value='توينجو' class='13 0'>توينجو</option>
+<option value='سينيك' class='13 0'>سينيك</option>
+<option value='فلوانس' class='13 0'>فلوانس</option>
+
+<option value='كانجو' class='13 0'>كانجو</option>
+<option value='كليو' class='13 0'>كليو</option>
+<option value='لاجونا' class='13 0'>لاجونا</option>
+<option value='ميغان' class='13 0'>ميغان</option>
+<option value='اكتيون' class='23 0'>اكتيون</option>
+<option value='ركستون' class='23 0'>ركستون</option>
+<option value='كيرون' class='23 0'>كيرون</option>
+
+<option value='موسو' class='23 0'>موسو</option>
+<option value='C4' class='36 0'> C4</option>
+
+<option value='C-Elysee' class='36 0'>C-Elysee</option>
+<option value='C1' class='36 0'>C1</option>
+
+<option value='C3' class='36 0'>C3</option>
+<option value='C3 Aircross' class='36 0'>C3 Aircross</option>
+<option value='C5' class='36 0'>C5</option>
+
+<option value='DS3' class='36 0'>DS3</option>
+<option value='Spacetourer' class='36 0'>Spacetourer</option>
+<option value='بيرلنجو مالتي سبيس   ' class='36 0'>بيرلنجو مالتي سبيس   </option>
+<option value='بيرلينجو' class='36 0'>بيرلينجو</option>
+<option value='بيكاسو C3' class='36 0'>بيكاسو C3</option>
+<option value='بيكاسو C4' class='36 0'>بيكاسو C4</option>
+<option value='جامبي' class='36 0'>جامبي</option>
+
+
+<option value='جراند C4 بيكاسو   ' class='36 0'>جراند C4 بيكاسو    </option>
+<option value='كسارا' class='36 0'>كسارا</option>
+<option value='citigo' class='9 0'>citigo</option>
+<option value='اوكتافيا' class='9 0'>اوكتافيا</option>
+<option value='بارمن' class='9 0'>بارمن</option>
+<option value='رابيد' class='9 0'>رابيد</option>
+<option value='رومستر' class='9 0'>رومستر</option>
+<option value='سوبيرب' class='9 0'>سوبيرب</option>
+<option value='فابيا' class='9 0'>فابيا</option>
+<option value='فيبوريت' class='9 0'>فيبوريت</option>
+<option value='فيليسيا' class='9 0'>فيليسيا</option>
+<option value='كاروك' class='9 0'>كاروك</option>
+<option value='كسارا' class='9 0'>كسارا</option>
+<option value='كودياك' class='9 0'>كودياك</option>
+<option value='يتي' class='9 0'>يتي</option>
+<option value='B4' class='18 0'>B4</option>
+<option value='امبريزا' class='18 0'>امبريزا</option>
+<option value='عريض' class='18 0'>عريض</option>
+<option value='فوريستر' class='18 0'>فوريستر</option>
+<option value='ليجاسي' class='18 0'>ليجاسي</option>
+<option value='نملة' class='18 0'>نملة</option>
+<option value='SX4' class='35 0 '>SX4</option>
+<option value='رينو' class='35 0'>رينو</option>
+<option value='ساموراي' class='35 0'>ساموراي</option>
+<option value='سويفت' class='35 0'>سويفت</option>
+<option value='فورينزا' class='35 0'>فورينزا</option>
+<option value='فيتارا' class='35 0'>فيتارا</option>
+
+<option value='فيرونا' class='35 0'>فيرونا</option>
+<option value='ابيزا' class='29 0'>ابيزا</option>
+<option value='توليدو' class='29 0'>توليدو</option>
+<option value='روندا' class='29 0'>روندا</option>
+<option value='قرطبة' class='29 '>قرطبة</option>
+<option value='ليون' class='29 0'>ليون</option>
+<option value='داف' class='37 0'>داف</option>
+<option value='مان' class='37 0'>مان</option>
+<option value='افيو' class='32 0'>افيو</option>
+<option value='اليرو' class='32 0'>اليرو</option>
+<option value='اوبترا' class='32 0'>اوبترا</option>
+<option value='بونتباك' class='32 0'>بونتباك</option>
+<option value='ترافرس' class='32 0'>ترافرس</option>
+<option value='سبارك' class='32 0'>سبارك</option>
+
+
+<option value='كابتيفا' class='32 0'>كابتيفا</option>
+<option value='كافلير' class='32 0'>كافلير</option>
+<option value='كروز' class='32 0'>كروز</option>
+<option value='ماليبو' class='32 0'>ماليبو</option>
+<option value='S MAX' class='21 0'>S MAX</option>
+<option value='اسكورت' class='21 0'>اسكورت</option>
+<option value='اكيلاين' class='21 0'>اكيلاين</option>
+<option value='ايدج' class='21 0'>ايدج</option>
+<option value='ترانزيت' class='21 0'>ترانزيت</option>
+<option value='ترايسر' class='21 0'>ترايسر</option>
+<option value='سيرا' class='21 0'>سيرا</option>
+<option value='فوكس' class='21 0'>فوكس</option>
+<option value='فيستا' class='21 0'>فيستا</option>
+<option value='فيوجن' class='21 0'>فيوجن</option>
+<option value='كوجا' class='21 0'>كوجا</option>
+<option value='كورتينا' class='21 0'>كورتينا</option>
+<option value='كونيكت' class='21 0'>كونيكت</option>
+<option value='موستانغ' class='21 0'>موستانغ</option>
+<option value='مونديو' class='21 0'>مونديو</option>
+<option value='FH 12' class='19 0'>FH 12</option>
+<option value='FH 16' class='19 0'>FH 16</option>
+<option value='FL 10' class='19 0'>FL 10</option>
+
+<option value='FL 12' class='19 0'>FL 12</option>
+<option value='FL 7' class='19 0'>FL 7</option>
+<option value='FM 10' class='19 0'>FM 10</option>
+<option value='FM 12' class='19 0'>FM 12</option>
+<option value='FM 7' class='19 0'>FM 7</option>
+<option value='N10' class='19 0'>N10</option>
+<option value='N12' class='19 0'>N12</option>
+<option value='CC' class='7 0'>CC</option>
+<option value='Golf Plus' class='7 0'>Golf Plus</option>
+<option value='GTI' class='7 0'>GTI</option>
+<option value='LT' class='7 0'>LT</option>
+<option value='أماروك' class='7 0'>أماروك</option>
+<option value='باسات' class='7 0'>باسات</option>
+<option value='بورا' class='7 0'>بورا</option>
+<option value='بولو' class='7 0'>بولو</option>
+<option value='بيتل' class='7 0'>بيتل</option>
+<option value='ترانسبورتر' class='7 0'>ترانسبورتر </option>
+<option value='توران' class='7 0'>توران</option>
+<option value='تيجوان' class='7 0'>تيجوان</option>
+<option value='جولف' class='7 0'>جولف</option>
+<option value='جيتا  ' class='7 0'>جيتا</option>
+<option value='شيروكو' class='7 0'>شيروكو</option>
+<option value='طوارق' class='7 0'>طوارق</option>
+<option value='فايتون' class='7 0'>فايتون</option>
+<option value='فينتو5' class='7 0'>فينتو</option>
+<option value='كادي' class='7 0'>كادي</option>
+<option value='كبينة' class='7 0'>كبينة</option>
+<option value='كرافتر' class='7 0'>كرافتر</option>
+<option value='كرافيل' class='7 0'>كرافيل</option>
+<option value='127' class='5 0'>127</option>
+<option value='500' class='5 0'>500</option>
+<option value='اوتوبيانكي' class='5 0'>اوتوبيانكي</option>
+<option value='اونو' class='5 0'>اونو</option>
+<option value='باندا' class='5 0'>باندا</option>
+
+
+<option value='برافو' class='5 0'>برافو</option>
+<option value='بونتو' class='5 0'>بونتو</option>
+<option value='تيبو' class='5 0'>تيبو</option>
+<option value='تيمبرا' class='5 0'>تيمبرا</option>
+<option value='دوبلو' class='5 0'>دوبلو</option>
+<option value='فرينو' class='5 0'>فرينو</option>
+<option value='كيوبو' class='5 0'>كيوبو</option>
+<option value='لينيا' class='5 0'>لينيا</option>
+<option value='CTS' class='34 0'>CTS</option>
+<option value='Morning' class='20 0'>Morning</option>
+<option value='اوبتيما' class='20 0'>اوبتيما</option>
+<option value='برايد' class='20 0'>برايد</option>
+<option value='بيكانتو' class='20 0'>بيكانتو</option>
+<option value='ريو' class='20 0'>ريو</option>
+<option value='سبورتاج' class='20 0'>سبورتاج</option>
+<option value='سورينتو' class='20 0'>سورينتو</option>
+<option value='سول' class='20 0'>سول</option>
+<option value='سيد' class='20 0'>سيد</option>
+<option value='سيراتو' class='20 0 '>سيراتو</option>
+<option value='فورتي' class='20 0'>فورتي</option>
+<option value='كارنيفال' class='20 0'>كارنيفال</option>
+<option value='كارينز' class='20 0'>كارينز</option>
+<option value='ماجنتيس' class='20 0'>ماجنتيس</option>
+<option value='ديسكفري' class='8 0'>ديسكفري</option>
+<option value='ديفندر' class='8 0'>ديفندر</option>
+<option value='فري لاندر' class='8 0'>فري لاندر</option>
+<option value='3' class='16 0'>3</option>
+<option value='323' class='16 0'>323</option>
+<option value='325' class='16 0 '>325</option>
+<option value='5' class='16 0' >5</option>
+<option value='6' class='16  0'>6</option>
+
+
+<option value='BT50' class='16 0'>BT50</option>
+<option value='دميو' class='16 0'>دميو</option>
+<option value='لانتس' class='16 0'>لانتس</option>
+<option value=' ML 320' class='6 0 '> ML 320</option>
+<option value='170' class='6 0'>170</option>
+<option value='180' class='6 0'>180</option>
+<option value='190' class='6 0'>190</option>
+<option value='200' class='6 0'>200</option>
+<option value='207' class='6 0'>207</option>
+<option value='220' class='6 0'>220</option>
+<option value='230' class='6 0'>230</option>
+<option value='240' class='6 0 '>240</option>
+<option value='250' class='6  0'> 250</option>
+<option value='260' class='6 0'>260</option>
+<option value='280' class='6 0'>280</option>
+<option value='300' class='6 0'>300</option>
+<option value='313' class='6 0'>313</option>
+<option value='350' class='6 0'>350</option>
+<option value='380' class='6 0'>380</option>
+<option value='410' class='6 0'>410</option>
+<option value='411' class='6 0'>411</option>
+<option value='412' class='6 0'>412</option>
+<option value='416' class='6 0'>416</option>
+
+
+<option value='518' class='6 0'>518</option>
+<option value='608' class='6  0'>608</option>
+<option value='709' class='6 0'>709</option>
+<option value='814' class='6 0'>814</option>
+<option value='914' class='6 0'>914</option>
+<option value='C180' class='6 0'>C180</option>
+<option value='C200' class='6 0'>C200</option>
+<option value='C220' class='6 0'>C220</option>
+<option value='C250' class='6 0'>C250</option>
+<option value='C270' class='6 0 '>C270</option>
+<option value='C300' class='6 0'>C300</option>
+<option value='C63' class='6 0'>C63</option>
+<option value='CLK' class='6  0'>CLK</option>
+<option value='D412' class='6 0'>D412</option>
+<option value='E200' class='6 0'>E200</option>
+<option value='E220' class='6 0'>E220</option>
+<option value='E230' class='6 0'>E230</option>
+<option value='E250' class='6 0'>E250</option>
+<option value='E270' class='6 0'>E270</option>
+<option value='E280' class='6 0'>E280</option>
+<option value='E300' class='6 0'>E300</option>
+<option value='E320' class='6 0'>E320</option>
+<option value='E350' class='6 0'>E350</option>
+<option value='E400' class='6 0'>E400</option>
+
+
+<option value='E550' class='6 0'>E550</option>
+<option value='GL350' class='6 0'>GL350</option>
+<option value='GL450' class='6 0'>GL450</option>
+<option value='GL550' class='6 0'>GL550</option>
+<option value='GL63' class='6 0'>GL63</option>
+<option value='S320' class='6 0'>S320</option>
+<option value='SL350' class='6 0'>SL350</option>
+<option value='SL550' class='6 0'>SL550</option>
+<option value='SL63' class='6 0' >SL63</option>
+<option value='SL65' class='6 0'>SL65</option>
+<option value='سبرنتر' class='6 0'>سبرنتر</option>
+<option value='فيتو' class='6 0'>فيتو</option>
+<option value='I300' class='17  0'>I300</option>
+<option value='L200' class='17 0'>L200</option>
+<option value='L400' class='17 0'>L400</option>
+<option value='Space Star' class='17 0'>Space Star</option>
+<option value='اتراج ' class='17 0'>اتراج  </option>
+<option value='اوت لاندر' class='17 0'>اوت لاندر</option>
+<option value='باجيرو' class='17 0'>باجيرو</option>
+<option value='جالانت' class='17 0'>جالانت</option>
+<option value='بيس ستار' class='17 0'>سبيس ستار</option>
+<option value='كاريزما' class='17 0'>كاريزما</option>
+<option value='لانسر' class='17 0'>لانسر</option>
+<option value='ماجنوم' class='17 0'>ماجنوم</option>
+<option value='الميرا' class='12 0'>الميرا</option>
+<option value='باترول' class='12 0'>باترول</option>
+<option value='اث فايندر' class='12 0'>باث فايندر</option>
+<option value='تيدا' class='12 0'>تيدا</option>
+<option value='تيرانو' class='12 0'>تيرانو</option>
 
 
 
-											</h5>	
-										</td>
-											<td>
-											<h5 class="title">
-لا شيء 
+<option value='جوك' class='12 0 '>جوك</option>
+<option value='سني' class='12 0'>سني</option>
+<option value='كشكاي' class='12 0'>كشكاي</option>
 
 
-											</h5>	
-										</td>
-										<td>
-										
-										
-							<img src="https://www.w3schools.com/images/w3schools_green.jpg" class="media-photo" style="float: right;">
-											
-										</td>
+<option value='مكسيما' class='12 0 '>مكسيما</option>
+<option value='ميكرا' class='12 0'>ميكرا</option>
+<option value='نافارا' class='12 0'>نافارا</option>
 
-									</tr> 
-								<?php }?>
-								 </tbody>
-							</table>
-						</div>
-					</div>
-				</div>
-				
-			</div>
-		</section>
-		
-	</div>
+
+
+<option value='نوت' class='12 0'>نوت</option>
+<option value='وينر' class='12 0'>وينر</option>
+<option value='CR-V' class='31 0'>CR-V</option>
+<option value='اكورد' class='31 0'>اكورد</option>
+<option value='سيفيك' class='31 0'>سيفيك</option>
+
+
+
+<option value='H1' class='1 0 '>H1</option>
+<option value='H100' class='1 0 '>H100</option>
+<option value='i10' class='1 0'>i10</option>
+<option value='i20' class='1 0'>i20</option>
+<option value='i25' class='1 0'>i25</option>
+
+
+<option value='i30' class='1 0'>i30</option>
+<option value='i40' class='1 0'>i40</option>
+<option value='ix35' class='1 0'>ix35</option>
+<option value='ix55' class='1 0'>ix55</option>
+<option value='اتوس' class='1 0'>اتوس</option>
+<option value='ازيرا' class='1 0'>ازيرا</option>
+<option value='افانتي' class='1 0'>افانتي</option>
+
+
+<option value='اكسنت' class='1 0 '>اكسنت</option>
+<option value='الانترا' class='1 0'>الانترا</option>
+<option value='تراجيت' class='1 0' >تراجيت</option>
+<option value='توسان' class='1 0'>توسان</option>
+<option value='توكسون' class='1 0'>توكسون</option>
+
+
+
+
+<option value='تيراكان' class='1 0'>تيراكان</option>
+<option value='جالوبر' class='1 0'>جالوبر</option>
+<option value='جيتس' class='1 0'>جيتس</option>
+<option value='سانتافيه' class='1 0'>سانتافيه</option>
+<option value='سوناتا' class='1 0'>سوناتا  </option>
+<option value='فيرنا' class='1 0'>فيرنا</option>
+<option value='فيلوستر' class='1 0'>فيلوستر</option>
+<option value='كليك' class='1 0'>كليك</option>
+<option value='كوبيه' class='1 0 '>كوبيه</option>
+<option value='ماتركس' class='1 0'>ماتركس</option>
+</select>    
+</fieldset>
+ <select    name="paymentmethod">
+<option value=" نقدا فقط  ">  نقداً فقط   </option>
+<option value="إمكانية التقسيط  ">إمكانية التقسيط   </option>
+</select>
+ <select  name="carstatus" required>
+                                                <option value="صفر كيلو">صفر كيلو</option>
+                                                <option  value="مستعملة">مستعملة </option>
+                                                 <option  value="مستوردة">مستوردة </option>
+                                            </select>
+<input type="number"  min="2000" name="price" placeholder="السعر  *">
+ <textarea name="moredetail" placeholder="معلومات اخرى"></textarea>
+<input type="submit" id="submit" name="submit" value="أرسال الطلب" />
+</form>
 </div>
-</body>
-</html>
+                        </body>
+ <script>
+
+            function myFunction() {
+  var x = document.getElementById("myTopnav");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+}
+            function myFunction1() {
+
+  var x = document.getElementById("mySelect").value;
+  var cols1 = document.getElementsByClassName('0');
+        document.getElementById("1").selected=true;
+
+  for(i = 0; i < cols1.length; i++) {
+    cols1[i].style.display = "none";
+  
+  }
+  
+   console.log(x);
+     
+  var cols = document.getElementsByClassName(x);
+ 
+  for(i = 0; i < cols.length; i++) {
+    cols[i].style.display = "block";
+    
+  } 
+  
+
+ 
+}
+</script>
+                    </html>
