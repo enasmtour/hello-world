@@ -1,120 +1,106 @@
-
-body {
-	font-family: 'Open Sans', sans-serif;
-	color: #353535;
-	direction: rtl;
+.form-style-5{
+	max-width: 500px;
+	padding: 10px 20px;
+	background: #f4f7f8;
+	margin: 10px auto;
+	padding: 20px;
+	background: #f4f7f8;
+	border-radius: 8px;
+	font-family: Georgia, "Times New Roman", Times, serif;
 }
-.container{
-      
-}
-.content{
-		/*width:100%;*/
-		  width: 1200px;
-        /*margin-right: 2%!important;*/
-}
-.content h1 {
-	text-align: center;
-}
-.content .content-footer p {
-	color: #6d6d6d;
-    font-size: 12px;
-    text-align: center;
-}
-.content .content-footer p a {
-	color: inherit;
-	font-weight: bold;
-}
-
-/*	--------------------------------------------------
-	:: Table Filter
-	-------------------------------------------------- */
-.panel {
-	border: 1px solid #ddd;
-	background-color: #fcfcfc;
-}
-.panel  {
-	width: 130%;
-	margin-right: 2px!important;
+a{
+	text-decoration: none;
 
 }
+.form-style-5 fieldset{
+	border: none;
+}
+.form-style-5 legend {
+	font-size: 1.4em;
+	margin-bottom: 10px;
+}
+.form-style-5 label {
+	display: block;
+	margin-bottom: 8px;
+}
+.sele option { 
+        display:none;
+      } 
+.form-style-5 input[type="text"],
 
+.form-style-5 input[type="number"],
+.form-style-5 input[type="search"],
 
-.panel{
-	transition: background-color .3s ease;
-}
-.pull-left{
-	width: 200px;
-	height: 150px;
-}
-td{
-	width:10%;
-}
-.table-filter {
-	background-color: #fff;
-	border-bottom: 1px solid #eee;
-}
-.table-filter tbody tr:hover {
-	cursor: pointer;
-	background-color: #eee;
-}
-.table-filter tbody tr td {
-	padding: 10px;
-	vertical-align: middle;
-	border-top-color: #eee;
-}
-.table-filter tbody tr.selected td {
-	background-color: #eee;
-}
-.table-filter tr td:first-child {
-	width: 83px;
-}
-.table-filter tr td:nth-child(2) {
-	width: 50px;
-}
-
-.table-filter .media-photo {
-	width: 100px;
-	height: 90px;
-
-
-}
-.table-filter .media-body {
-    display: block;
-   
-}
-.table-filter .media-meta {
-	font-size: 11px;
-	color: #999;
-}
-.table-filter .media .title {
-	color: #2BBCDE;
-	font-size: 14px;
-	font-weight: bold;
-	line-height: normal;
+.form-style-5 textarea,
+.form-style-5 select {
+	font-family: Georgia, "Times New Roman", Times, serif;
+	background: rgba(255,255,255,.1);
+	border: none;
+	border-radius: 4px;
+	font-size: 20px;
 	margin: 0;
-}
-.table-filter .media .title span {
-	font-size: .8em;
-	margin-right: 20px;
-}
-
-.container {
-        width: 1200px;
-}
-.col-md-8{
-	 float: right;
-
-}
-@media (min-width: 992px) {
-.col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12 {
-        float: right;
-} }
-
-@media(max-width: 600px){
-	.panel  {
+	outline: 0;
+	height: 55px;
+	padding: 5px;
 	width: 100%;
-	margin-right: 2px!important;
-
+	box-sizing: border-box; 
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box; 
+	background-color: #e8eeef;
+	color:black;
+	-webkit-box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
+	box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
+	margin-bottom: 20px;
+}
+.form-style-5 input[type="text"]:focus,
+.form-style-5 input[type="date"]:focus,
+.form-style-5 input[type="datetime"]:focus,
+.form-style-5 input[type="email"]:focus,
+.form-style-5 input[type="number"]:focus,
+.form-style-5 input[type="search"]:focus,
+.form-style-5 input[type="time"]:focus,
+.form-style-5 input[type="url"]:focus,
+.form-style-5 textarea:focus,
+.form-style-5 select:focus{
+	background: #d2d9dd;
+}
+.form-style-5 select{
+	-webkit-appearance: menulist-button;
+	        height: 46px;
+}
+.form-style-5 .number {
+	background: #1abc9c;
+	color: #fff;
+	height: 30px;
+	width: 30px;
+	display: inline-block;
+	font-size: 0.8em;
+	margin-right: 4px;
+	line-height: 30px;
+	text-align: center;
+	text-shadow: 0 1px 0 rgba(255,255,255,0.2);
+	border-radius: 15px 15px 15px 0px;
 }
 
+.form-style-5 input[type="submit"],
+.form-style-5 input[type="button"]
+{
+	position: relative;
+	display: block;
+	padding: 19px 39px 18px 39px;
+	color: #FFF;
+	margin: 0 auto;
+	background: #1abc9c;
+	font-size: 18px;
+	text-align: center;
+	font-style: normal;
+	width: 100%;
+	border: 1px solid #16a085;
+	border-width: 1px 1px 3px;
+	margin-bottom: 10px;
+}
+.form-style-5 input[type="submit"]:hover,
+.form-style-5 input[type="button"]:hover
+{
+	background: #109177;
 }
